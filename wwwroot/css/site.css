@@ -1,3 +1,23 @@
+:root {
+    --dark-navy: #0a192f;    /* Koyu lacivert arka plan */
+    --light-blue: #64ffda;   /* Açık mavi vurgular */
+    --lighter-navy: #112240; /* Biraz daha açık lacivert */
+    --navy-shadow: #020c1b;  /* Gölgeler için koyu ton */
+    --text-light: #ccd6f6;   /* Açık metin rengi */
+    --dark-bg: #1c2333;
+    --card-bg: #272e42;
+    --success-color: #00d488;
+    --danger-color: #ff4c4c;
+    --primary-color: #9b4dff;
+    --text-muted: #8c8f96;
+}
+
+body {
+    background-color: var(--dark-navy);
+    color: var(--text-light);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 html {
   font-size: 14px;
 }
@@ -28,4 +48,978 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0;
+    background-color: var(--navy-shadow);
+    color: var(--text-light);
+    border-right: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.sidebar-header {
+    padding: 25px 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.sidebar-brand {
+    color: var(--light-blue);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sidebar-brand:hover {
+    color: var(--light-blue);
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    margin: 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.sidebar-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.sidebar-link:hover {
+    color: var(--light-blue);
+    background-color: var(--lighter-navy);
+    padding-left: 35px;
+}
+
+.sidebar-link i {
+    font-size: 24px;
+    min-width: 32px;
+}
+
+.sidebar-link.active {
+    background-color: var(--lighter-navy);
+    border-left: 4px solid var(--light-blue);
+    color: var(--light-blue);
+    padding-left: 35px;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    background-color: var(--dark-navy);
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--lighter-navy);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    box-shadow: 0 4px 20px rgba(2, 12, 27, 0.7);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--light-blue);
+}
+
+.card-header {
+    background-color: rgba(100, 255, 218, 0.05);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    color: var(--light-blue);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    border-color: #0d6efd;
+    color: #0d6efd;
+}
+
+.btn-success {
+    background-color: transparent;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+}
+
+.btn-success:hover {
+    background-color: rgba(0, 255, 136, 0.1);
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+.btn-info {
+    background-color: transparent;
+    border: 1px solid #00b8ff;
+    color: #00b8ff;
+}
+
+.btn-info:hover {
+    background-color: rgba(0, 184, 255, 0.1);
+    border-color: #00b8ff;
+    color: #00b8ff;
+}
+
+/* Form Controls */
+.form-control {
+    background-color: var(--navy-shadow);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    color: var(--text-light);
+}
+
+.form-control:focus {
+    background-color: var(--navy-shadow);
+    border-color: var(--light-blue);
+    color: var(--text-light);
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25);
+}
+
+/* Status Indicators */
+.badge {
+    padding: 0.5em 1em;
+}
+
+.bg-success {
+    background-color: rgba(0, 255, 136, 0.2) !important;
+    color: #00ff88;
+}
+
+.bg-danger {
+    background-color: rgba(255, 0, 76, 0.2) !important;
+    color: #ff004c;
+}
+
+.bg-warning {
+    background-color: rgba(255, 208, 0, 0.2) !important;
+    color: #ffd000;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: var(--lighter-navy);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+/* Table Styles */
+.table {
+    color: var(--text-light);
+}
+
+.table thead th {
+    border-bottom-color: rgba(100, 255, 218, 0.1);
+}
+
+.table td, .table th {
+    border-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--navy-shadow);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--lighter-navy);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--light-blue);
+}
+
+.text-muted {
+    color: rgba(204, 214, 246, 0.6) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar-brand {
+        padding: 15px 0;
+        justify-content: center;
+    }
+
+    .sidebar-brand span {
+        display: none;
+    }
+
+    .sidebar-link {
+        padding: 20px 0;
+        justify-content: center;
+    }
+
+    .sidebar-link span {
+        display: none;
+    }
+
+    .sidebar-link i {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .main-content {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+    }
+}
+
+/* Status Container */
+.status-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Status Header */
+.status-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.status-icon-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--success-color);
+}
+
+.status-icon-large.success {
+    border-color: var(--success-color);
+    background: rgba(0, 212, 136, 0.1);
+}
+
+.status-icon-large.danger {
+    border-color: var(--danger-color);
+    background: rgba(255, 76, 76, 0.1);
+}
+
+.status-icon-large i {
+    font-size: 60px;
+    color: var(--success-color);
+}
+
+.status-icon-large.danger i {
+    color: var(--danger-color);
+}
+
+.status-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+/* Scan Section */
+.scan-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btn-scan {
+    background: var(--success-color);
+    color: var(--text-light);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-scan:hover {
+    background: #00bf7a;
+    transform: translateY(-2px);
+}
+
+.scan-description {
+    color: var(--text-muted);
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Status Grid */
+.status-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-header i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-item:last-child {
+    border-bottom: none;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-badge.success {
+    background: rgba(0, 212, 136, 0.1);
+    color: var(--success-color);
+}
+
+.status-badge.danger {
+    background: rgba(255, 76, 76, 0.1);
+    color: var(--danger-color);
+}
+
+.status-info {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Upgrade Banner */
+.upgrade-banner {
+    background: linear-gradient(45deg, #9b4dff, #7b38cc);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.banner-text h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.banner-text p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-upgrade {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.btn-upgrade:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .status-container {
+        padding: 20px;
+    }
+
+    .upgrade-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .banner-content {
+        flex-direction: column;
+    }
+
+    .status-title {
+        font-size: 24px;
+    }
+
+    .btn-scan {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Scan Page Styles */
+.scan-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.scan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.breadcrumb i {
+    font-size: 12px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Smart Scan Section */
+.main-scan-section {
+    margin-bottom: 60px;
+}
+
+.smart-scan-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.scan-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.scan-icon i {
+    font-size: 40px;
+    color: white;
+}
+
+.smart-scan-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.smart-scan-box p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.btn-scan {
+    background: var(--success-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-scan:hover {
+    transform: translateY(-2px);
+    background: #00bf7a;
+}
+
+/* Other Scans Section */
+.other-scans-section h3 {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.scan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.scan-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s;
+}
+
+.scan-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.scan-card-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(155, 77, 255, 0.1);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.scan-card-icon i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.scan-card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.scan-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.settings-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.settings-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .scan-container {
+        padding: 20px;
+    }
+
+    .scan-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .smart-scan-box {
+        padding: 30px 20px;
+    }
+
+    .scan-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Shared Page Styles */
+.security-container,
+.privacy-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 40px;
+}
+
+/* Protection Status */
+.protection-status {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.status-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-icon.protected {
+    background: rgba(0, 212, 136, 0.1);
+    border: 2px solid var(--success-color);
+}
+
+.status-icon.at-risk {
+    background: rgba(255, 76, 76, 0.1);
+    border: 2px solid var(--danger-color);
+}
+
+.status-icon i {
+    font-size: 50px;
+    color: var(--success-color);
+}
+
+.status-icon.at-risk i {
+    color: var(--danger-color);
+}
+
+/* Card Styles */
+.security-grid,
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.security-card,
+.privacy-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-header i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* Feature Items */
+.feature-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.feature-info h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.feature-info p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Toggle Switch */
+.toggle {
+    width: 50px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.toggle.active {
+    background: var(--success-color);
+}
+
+.toggle-slider {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: all 0.3s;
+}
+
+.toggle.active .toggle-slider {
+    left: 27px;
+}
+
+/* Privacy Tips */
+.privacy-tips {
+    margin-top: 40px;
+}
+
+.privacy-tips h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tip-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tip-card i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.tip-card h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.tip-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .security-container,
+    .privacy-container {
+        padding: 20px;
+    }
+
+    .security-grid,
+    .privacy-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Container styles */
+.security-container,
+.privacy-container,
+.scan-container {
+    height: calc(100vh - 60px); /* 60px header yüksekliği için */
+    padding: 20px;
+    margin: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Scroll'u engeller */
+}
+
+/* Header styles */
+.page-header {
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Header'ın küçülmesini engeller */
+}
+
+/* Grid containers */
+.security-grid,
+.privacy-grid,
+.scan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Card styles */
+.security-card,
+.privacy-card,
+.scan-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+.card-content {
+    flex: 1;
+    overflow-y: auto; /* İçerik çok uzunsa kart içinde scroll */
+    padding: 15px;
+}
+
+/* Protection status section */
+.protection-status {
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+/* Privacy tips section */
+.privacy-tips {
+    margin-top: 15px;
+    flex-shrink: 0;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Feature items */
+.feature-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+/* Smart scan section */
+.smart-scan-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .security-container,
+    .privacy-container,
+    .scan-container {
+        height: calc(100vh - 50px); /* Mobil header için daha az yükseklik */
+    }
+
+    .security-grid,
+    .privacy-grid,
+    .scan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
 }

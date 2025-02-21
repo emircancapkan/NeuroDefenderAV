@@ -1,0 +1,99 @@
+@model ScanViewModel
+
+<div class="scan-container">
+    <div class="scan-header">
+        <div class="breadcrumb">
+            <span>Protection</span>
+            <i class="bi bi-chevron-right"></i>
+            <span>Scans</span>
+        </div>
+        <h1>Scans</h1>
+        <div class="header-actions">
+            <button class="btn btn-outline-light">
+                <i class="bi bi-disc"></i>
+                Rescue Disk
+            </button>
+            <button class="btn btn-outline-light">
+                <i class="bi bi-clock-history"></i>
+                Scan History
+            </button>
+        </div>
+    </div>
+
+    <div class="main-scan-section">
+        <div class="smart-scan-box">
+            <div class="scan-icon">
+                <i class="bi bi-lightbulb"></i>
+            </div>
+            <h2>Smart Scan</h2>
+            <p>Scan for malware, Wi-Fi threats, PC issues, and more</p>
+            <button class="btn btn-scan">RUN SMART SCAN</button>
+        </div>
+    </div>
+
+    <div class="other-scans-section">
+        <h3>OTHER SCANS</h3>
+        
+        <div class="scan-grid">
+            <div class="scan-card">
+                <div class="scan-card-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <h4>Full Virus Scan</h4>
+                <p>Scan your entire PC from top to bottom</p>
+                <a href="#" class="settings-link">Settings</a>
+            </div>
+
+            <div class="scan-card">
+                <div class="scan-card-icon">
+                    <i class="bi bi-folder"></i>
+                </div>
+                <h4>Targeted Scan</h4>
+                <p>Scan specific folders or external drives</p>
+                <a href="#" class="settings-link">Settings</a>
+            </div>
+
+            <div class="scan-card">
+                <div class="scan-card-icon">
+                    <i class="bi bi-pc-display"></i>
+                </div>
+                <h4>Boot-Time Scan</h4>
+                <p>Scan for threats before Windows starts up</p>
+                <a href="#" class="settings-link">Settings</a>
+            </div>
+
+            <div class="scan-card">
+                <div class="scan-card-icon">
+                    <i class="bi bi-gear"></i>
+                </div>
+                <h4>Custom Scans</h4>
+                <p>Create your own scans</p>
+                <a href="#" class="settings-link">Settings</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Özel Tarama Modal -->
+<div class="modal fade" id="customScanModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Özel Tarama</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form asp-action="CustomScan">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="scanPath" class="form-label">Taranacak Klasör Yolu</label>
+                        <input type="text" class="form-control" id="scanPath" name="path" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                    <button type="submit" class="btn btn-primary">Taramayı Başlat</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 

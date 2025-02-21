@@ -1,0 +1,85 @@
+@model PrivacyViewModel
+@{
+    ViewData["Title"] = "Privacy Protection";
+}
+
+<div class="privacy-container">
+    <div class="page-header">
+        <div class="breadcrumb">
+            <span>Protection</span>
+            <i class="bi bi-chevron-right"></i>
+            <span>Privacy</span>
+        </div>
+        <h1>Privacy Protection</h1>
+    </div>
+
+    <div class="privacy-grid">
+        <div class="privacy-card">
+            <div class="card-header">
+                <i class="bi bi-incognito"></i>
+                <span>Privacy Features</span>
+            </div>
+            <div class="card-content">
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <h4>Data Tracking Protection</h4>
+                        <p>Protection against online tracking</p>
+                    </div>
+                    <div class="feature-toggle">
+                        <div class="toggle @(Model.DataCollection ? "active" : "")">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <h4>Webcam Protection</h4>
+                        <p>Blocks unauthorized webcam access</p>
+                    </div>
+                    <div class="feature-toggle">
+                        <div class="toggle active">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="privacy-card">
+            <div class="card-header">
+                <i class="bi bi-file-lock"></i>
+                <span>File Protection</span>
+            </div>
+            <div class="card-content">
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <h4>Ransomware Shield</h4>
+                        <p>Protection against ransomware</p>
+                    </div>
+                    <div class="feature-toggle">
+                        <div class="toggle active">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-tips">
+        <h3>Privacy Tips</h3>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <i class="bi bi-shield-lock"></i>
+                <h4>Use Strong Passwords</h4>
+                <p>Create passwords at least 12 characters long with mixed characters.</p>
+            </div>
+            <div class="tip-card">
+                <i class="bi bi-wifi"></i>
+                <h4>Use VPN</h4>
+                <p>Protect your data on unsecure networks by using a VPN.</p>
+            </div>
+        </div>
+    </div>
+</div> 

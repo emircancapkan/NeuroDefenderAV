@@ -2,7 +2,61 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model SystemStatusViewModel
+
+<div class="status-container">
+    <div class="status-header">
+        <div class="status-icon-large @(Model.SystemHealth == "Critical" ? "danger" : "success")">
+            <i class="bi bi-shield-check"></i>
+        </div>
+        <h1 class="status-title">@(Model.SystemHealth == "Critical" ? "Protection Required" : "You're Protected")</h1>
+    </div>
+
+    <div class="scan-section">
+        <button class="btn btn-scan">
+            <i class="bi bi-search"></i>
+            RUN SMART SCAN
+        </button>
+        <p class="scan-description">
+            One-click, all-inclusive PC checkup. Scan your PC for all kinds of security, privacy, and performance issues.
+        </p>
+    </div>
+
+    <div class="status-grid">
+        <div class="status-card">
+            <div class="card-header">
+                <i class="bi bi-shield-lock"></i>
+                <span>Security</span>
+            </div>
+            <div class="card-content">
+                <div class="status-item">
+                    <span>Real-Time Protection</span>
+                    <span class="status-badge @(Model.IsRealTimeProtectionEnabled ? "success" : "danger")">
+                        @(Model.IsRealTimeProtectionEnabled ? "Active" : "Disabled")
+                    </span>
+                </div>
+                <div class="status-item">
+                    <span>Last Scan</span>
+                    <span class="status-info">@Model.LastScanDate.ToString("MM/dd/yyyy HH:mm")</span>
+                </div>
+                <div class="status-item">
+                    <span>Threats Found</span>
+                    <span class="status-badge @(Model.ThreatCount > 0 ? "danger" : "success")">@Model.ThreatCount</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="upgrade-banner">
+        <div class="banner-content">
+            <div class="banner-icon">
+                <i class="bi bi-speedometer"></i>
+            </div>
+            <div class="banner-text">
+                <h3>Speed ​​up your system</h3>
+                <p>Optimize your system with our world-wide used cleaning tool.</p>
+            </div>
+        </div>
+        @* <button class="btn btn-upgrade">ŞİMDİ YÜKLE</button> *@
+    </div>
 </div>

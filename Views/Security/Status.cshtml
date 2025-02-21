@@ -1,0 +1,94 @@
+@model SecurityStatusViewModel
+
+<div class="security-container">
+    <div class="page-header">
+        <div class="breadcrumb">
+            <span>Protection</span>
+            <i class="bi bi-chevron-right"></i>
+            <span>Security</span>
+        </div>
+        <h1>Security Status</h1>
+    </div>
+
+    <div class="protection-status">
+        <div class="status-icon @(Model.IsProtected ? "protected" : "at-risk")">
+            <i class="bi bi-shield-@(Model.IsProtected ? "check" : "exclamation")"></i>
+        </div>
+        <h2>@(Model.IsProtected ? "Full Protection Active" : "Attention Required")</h2>
+        <p>@(Model.IsProtected ? "All security shields are active and up to date." : "Some security shields are disabled.")</p>
+    </div>
+
+    <div class="security-grid">
+        <div class="security-card">
+            <div class="card-header">
+                <i class="bi bi-shield-lock"></i>
+                <span>Basic Protection</span>
+            </div>
+            <div class="card-content">
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <h4>Real-Time Protection</h4>
+                        <p>Continuously protects your computer</p>
+                    </div>
+                    <div class="feature-toggle">
+                        <div class="toggle @(Model.RealTimeProtection ? "active" : "")">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <h4>Firewall</h4>
+                        <p>Protection against network attacks</p>
+                    </div>
+                    <div class="feature-toggle">
+                        <div class="toggle @(Model.FirewallStatus ? "active" : "")">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="security-card">
+            <div class="card-header">
+                <i class="bi bi-globe"></i>
+                <span>Web Koruması</span>
+            </div>
+            <div class="card-content">
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <h4>Web Kalkanı</h4>
+                        <p>Zararlı web sitelerine karşı koruma</p>
+                    </div>
+                    <div class="feature-toggle">
+                        <div class="toggle active">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="security-card">
+            <div class="card-header">
+                <i class="bi bi-envelope"></i>
+                <span>Mail Koruması</span>
+            </div>
+            <div class="card-content">
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <h4>Mail Kalkanı</h4>
+                        <p>Zararlı e-postalara karşı koruma</p>
+                    </div>
+                    <div class="feature-toggle">
+                        <div class="toggle active">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

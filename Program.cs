@@ -1,7 +1,11 @@
+using NeuroDefenderAV.Services;
+using NeuroDefenderAV.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IScanService, ScanService>();
 
 var app = builder.Build();
 
