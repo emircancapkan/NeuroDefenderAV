@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NeuroDefenderAV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63a8b21f2e992b3e596b7079b403a3fe227a7e33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+702e384c25b223a2e5fa2306378e4a7ac75ef58e")]
 [assembly: System.Reflection.AssemblyProductAttribute("NeuroDefenderAV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NeuroDefenderAV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
