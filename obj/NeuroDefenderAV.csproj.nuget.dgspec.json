@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj": {}
+    "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj": {
+    "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj",
+        "projectUniqueName": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj",
         "projectName": "NeuroDefenderAV",
-        "projectPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj",
+        "projectPath": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj",
         "packagesPath": "C:\\Users\\badbo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\obj\\",
+        "outputPath": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

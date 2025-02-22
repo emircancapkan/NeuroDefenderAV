@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uJxfO3TJEI4=",
+  "dgSpecHash": "mJnCWeDNwfI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj",
+  "projectFilePath": "c:\\Users\\badbo\\OneDrive\\Documents\\GitHub\\NeuroDefenderAV\\NeuroDefenderAV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\badbo\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\badbo\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
